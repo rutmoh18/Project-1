@@ -1,4 +1,5 @@
 📄 Elastic File System (EFS) Setup
+
 🔹 1. Created Security Group for EFS
 
 Navigated to VPC → Security Groups
