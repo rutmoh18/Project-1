@@ -137,3 +137,88 @@ Used /etc/fstab for automatic mounting
 ✔ EFS mounted successfully
 ✔ Website deployed
 ✔ Persistent storage verified
+
+
+Create AMI (Amazon Machine Image)
+🟢 Step 1: Navigate to EC2 Instance
+
+Service: Amazon EC2
+
+Opened EC2 Dashboard
+
+Selected running instance:
+
+Name: Web-Server-For-EFS-And-Ami
+
+This instance already had:
+
+Apache installed
+
+EFS mounted
+
+Website configured
+
+👉 This instance will be used as a template for scaling
+
+🟢 Step 2: Create Image (AMI)
+
+Selected the EC2 instance
+
+Clicked on:
+
+Actions → Image and templates → Create Image
+
+
+🟢 Step 3: Create AMI
+
+Clicked on Create Image
+
+👉 AWS started creating:
+
+Snapshot of EC2 volume
+
+AMI from that snapshot
+
+🟢 Step 4: Verify AMI Creation
+
+Navigated to:
+
+EC2 → AMIs
+
+Filter: Owned by me
+
+👉 Observed:
+
+AMI Name: AMI-Image-For-Web-Server-project-1
+
+State: Available
+
+✅ AMI successfully created
+
+🟢 Step 5: Instance Cleanup (Optional but Good Practice)
+
+Terminated the original EC2 instance
+
+👉 Reason:
+
+Cost optimization
+
+Future instances will be launched using AMI
+
+🎯 Final Outcome
+
+Created a reusable Golden Image (AMI)
+
+Contains:
+
+Apache Web Server
+
+Mounted EFS
+
+Website configuration
+
+👉 This AMI can now be used in:
+
+Auto Scaling Group
+
+Load Balancer setup
