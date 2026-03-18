@@ -1,1 +1,103 @@
+📄 Project Overview
+🚀 Resilient and Scalable Web Application Deployment on AWS
 
+This project was designed and implemented to build a highly available, scalable, and secure web application infrastructure on Amazon Web Services (AWS).
+
+The primary objective of this project was to address real-world challenges such as handling variable traffic loads, ensuring minimal downtime, and maintaining data persistence across multiple instances.
+
+🎯 Why This Project Was Built
+
+In modern cloud environments, applications must be able to:
+
+Handle increasing user traffic without performance degradation
+
+Remain available even if some components fail
+
+Scale automatically based on demand
+
+Ensure secure communication between services
+
+This project was created to simulate a production-ready cloud architecture that solves these challenges using AWS services.
+
+🧠 Problem Statement
+
+Traditional single-server architectures suffer from:
+
+Single point of failure
+
+Limited scalability
+
+Data inconsistency across instances
+
+Manual intervention during traffic spikes
+
+To overcome these limitations, a distributed and automated architecture was required.
+
+🏗️ Solution Overview
+
+To solve these challenges, a multi-tier AWS architecture was implemented using:
+
+Amazon EC2 → Hosts the web application
+
+Amazon EFS → Provides shared and persistent storage
+
+Elastic Load Balancing → Distributes incoming traffic across instances
+
+AWS Auto Scaling → Automatically adjusts the number of instances based on demand
+
+VPC → Provides isolated and secure network environment
+
+⚙️ Key Features
+🔹 High Availability
+
+Deployed resources across multiple Availability Zones
+
+Load Balancer ensures traffic distribution
+
+Auto Scaling replaces failed instances automatically
+
+🔹 Scalability
+
+Auto Scaling dynamically increases or decreases EC2 instances
+
+System handles traffic spikes without manual intervention
+
+🔹 Data Persistence
+
+EFS provides shared storage across all EC2 instances
+
+Data remains intact even if instances are terminated
+
+🔹 Security
+
+Implemented Security Group chaining:
+
+ALB → EC2 → EFS
+
+EC2 instances are not directly exposed to the internet
+
+Controlled and secure communication between services
+
+🔹 Fault Tolerance
+
+If one instance fails, traffic is routed to healthy instances
+
+Auto Scaling launches new instances automatically
+
+🎯 Outcome
+
+The final architecture successfully achieved:
+
+Seamless traffic distribution
+
+Automatic scaling based on demand
+
+Secure and isolated infrastructure
+
+High availability with minimal downtime
+
+Persistent shared storage across instances
+
+💡 Conclusion
+
+This project demonstrates how AWS services can be combined to build a robust, production-ready cloud architecture capable of handling real-world application requirements such as scalability, availability, and security.
